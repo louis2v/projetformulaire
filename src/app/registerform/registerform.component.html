@@ -1,0 +1,17 @@
+<h2>signup</h2>
+<!-- formulaire piloté par template -->
+<form (ngSubmit)="register(userForm.value)" #userForm="ngForm">
+
+    <div>
+        <label>Username</label>
+        <input name="username" [(ngModel)]="user.username">
+        <small>{{user.username}} vient d'étre ecris</small>
+    </div>
+    <div>
+        <label>Password</label>
+        <input name="password" type="password" [(ngModel)]="user.password">
+    </div>
+
+    <input type="submit" value="send">
+</form>
+

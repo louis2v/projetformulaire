@@ -1,0 +1,24 @@
+<h2>sign up by code</h2>
+<!-- formulaire piloté par code -->
+<form (ngSubmit)="register()" [formGroup]="userForm">
+    <div>
+        <label>Username: </label>
+        <input formControlName="username">
+        <div style="color:red" *ngIf="userForm.get('username')?.dirty && userForm.get('username')?.hasError('required')">User needed</div>
+    </div>
+    <div>
+        <label>Password: </label>
+        <input type="password" formControlName="password">
+    </div>
+
+    <input type="submit" value="send" [disabled]="userForm.invalid">
+    <input type="button" value="reset" (click)="reset()">
+
+
+
+</form>
+
+<input type="button" value="PDF" (click)="topdf()">
+
+<div id="dashboard">
+</div>

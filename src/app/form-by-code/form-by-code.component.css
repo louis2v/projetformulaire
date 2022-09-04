@@ -1,0 +1,7 @@
+#dashboard{
+    height: 500px;
+    width: 500px;
+}
+thead{
+    border: 2px solid black;
+}
